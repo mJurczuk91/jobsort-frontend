@@ -16,7 +16,6 @@ async function getAll():Promise<Offer[]> {
             revalidate: 0,
         }
     }).then(response => response.json()) as any[];
-    console.log(offers.length);
     return offers.map(offer => {
         return {
             offerLink: offer.offer_link,

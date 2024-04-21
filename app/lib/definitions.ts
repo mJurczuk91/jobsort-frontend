@@ -5,4 +5,5 @@ export type Offer = {
     technologies: string[],
     isJuniorFriendly: boolean,
     noExperienceRequired: boolean,
+    offerValidDate: Date,
 }
