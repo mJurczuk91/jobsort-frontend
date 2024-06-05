@@ -8,14 +8,19 @@ type Props = {
 
 export default function OfferTile({ offer }: Props) {
     return (
-        <div className="m-2 p-2  max-w-2xl border border-black rounded-sm">
+        <div className="my-4 max-w-2xl border border-black rounded-sm">
             <a target="_blank" href={offer.offerUrl}>
-                <div className="w-fit md:max-w-2xl">
-                    {offer.noExperienceRequired && <NoExperienceBadge />}
-
-                    <p className="">
+                <div className="w-fit md:max-w-2xl p-4">
+                    <p className="tracking-tight my-4">
                         {offer.description}
                     </p>
+
+                    <p className="my-4">
+                        <span>Technologies: </span>
+                        {offer.technologies.join(', ')}
+                    </p>
+
+                    {offer.noExperienceRequired && <NoExperienceBadge />}
                 </div>
             </a>
         </div>
