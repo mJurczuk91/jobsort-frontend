@@ -1,18 +1,20 @@
-'use client'
-import TechSelector from "./techSelector";
-import { OfferFiltersContext } from "../../offerFiltersProvider";
-import { useContext } from "react";
+
+import TechMenu from "./techMenu";
 
 type Props = {
     technologies: string[],
 }
 
 export default function Navbar({ technologies }: Props) {
-    const { toggleTechFilter } = useContext(OfferFiltersContext);
+
     return (
-        <nav>
-            <div>
-                {technologies.map(tech => <TechSelector tech={tech} onClickFunction={toggleTechFilter} />)}
+        <nav className="flex w-full justify-center">
+            <img className="w-72 mr-8" src="/logo.jpeg" alt="logo" />
+            <div className="flex flex-col justify-center items-center ">
+                <h1 className="text-2xl font-bold my-4">
+                    Junior friendly web-dev job offers
+                </h1>
+                <TechMenu technologies={technologies} />
             </div>
         </nav>
     );
