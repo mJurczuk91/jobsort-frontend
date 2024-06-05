@@ -18,8 +18,7 @@ async function getAll():Promise<Offer[]> {
     }).then(response => response.json()) as any[];
     return offers.map(offer => {
         return {
-            offerLink: offer.offer_link,
-            title: offer.title,
+            offerUrl: offer.offer_url,
             description: offer.description,
             technologies: offer.technologies,
             isJuniorFriendly: offer.is_junior_friendly,

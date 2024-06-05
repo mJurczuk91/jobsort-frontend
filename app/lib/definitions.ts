@@ -1,6 +1,5 @@
 export type Offer = {
-    offerLink: string,
-    title: string, 
+    offerUrl: string,
     description: string,
     technologies: string[],
     isJuniorFriendly: boolean,
